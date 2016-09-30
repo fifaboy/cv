@@ -1,0 +1,147 @@
+
+\documentclass[paper=a4,fontsize=11pt]{scrartcl} 
+							
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage[protrusion=true,expansion=true]{microtype}
+\usepackage{amsmath,amsfonts,amsthm}     % Math packages
+\usepackage{graphicx}                    % Enable pdflatex
+\usepackage[svgnames]{xcolor}            % Colors by their 'svgnames'
+\usepackage{geometry}
+	\textheight=700px                    % Saving trees ;-)
+\usepackage{url, euler}
+
+\frenchspacing              % Better looking spacings after periods
+\pagestyle{empty}           % No pagenumbers/headers/footers
+
+%%% Custom sectioning (sectsty package)
+%%% ------------------------------------------------------------
+\usepackage{sectsty}
+
+\sectionfont{%			            % Change font of \section command
+	\usefont{OT1}{phv}{b}{n}%		% bch-b-n: CharterBT-Bold font
+	\sectionrule{0pt}{0pt}{-5pt}{3pt}}
+
+%%% Macros
+%%% ------------------------------------------------------------
+\newlength{\spacebox}
+\settowidth{\spacebox}{8888888888}			% Box to align text
+\newcommand{\sepspace}{\vspace*{1em}}		% Vertical space macro
+
+\newcommand{\MyName}[1]{ % Name
+		\Huge \usefont{OT1}{phv}{b}{n} \hfill #1
+		\par \normalsize \normalfont}
+		
+\newcommand{\MySlogan}[1]{ % Slogan (optional)
+		\large \usefont{OT1}{phv}{m}{n}\hfill \textit{#1}
+		\par \normalsize \normalfont}
+
+\newcommand{\NewPart}[1]{\section*{\uppercase{#1}}}
+
+\newcommand{\PersonalEntry}[2]{
+		\noindent\hangindent=2em\hangafter=0 % Indentation
+		\parbox{\spacebox}{        % Box to align text
+		\textit{#1}}		       % Entry name (birth, address, etc.)
+		\hspace{1.5em} #2 \par}    % Entry value
+
+\newcommand{\SkillsEntry}[2]{      % Same as \PersonalEntry
+		\noindent\hangindent=2em\hangafter=0 % Indentation
+		\parbox{\spacebox}{        % Box to align text
+		\textit{#1}}			   % Entry name (birth, address, etc.)
+		\hspace{1.5em} #2 \par}    % Entry value	
+		
+\newcommand{\EducationEntry}[4]{
+		\noindent \textbf{#1} \hfill      % Study
+		\colorbox{Black}{%
+			\parbox{6em}{%
+			\hfill\color{White}#2}} \par  % Duration
+		\noindent \textit{#3} \par        % School
+		\noindent\hangindent=2em\hangafter=0 \small #4 % Description
+		\normalsize \par}
+
+\newcommand{\WorkEntry}[4]{				  % Same as \EducationEntry
+		\noindent \textbf{#1} \hfill      % Jobname
+		\colorbox{Black}{\color{White}#2} \par  % Duration
+		\noindent \textit{#3} \par              % Company
+		\noindent\hangindent=2em\hangafter=0 \small #4 % Description
+		\normalsize \par}
+
+%%% Begin Document
+%%% ------------------------------------------------------------
+\begin{document}
+% you can upload a photo and include it here...
+%\begin{wrapfigure}{l}{0.5\textwidth}
+%	\vspace*{-2em}
+%		\includegraphics[width=0.15\textwidth]{photo}
+%\end{wrapfigure}
+
+\MyName{Masum Billal}
+\MySlogan{Curriculum Vitae}
+
+\sepspace
+
+%%% Personal details
+%%% ------------------------------------------------------------
+\NewPart{Personal details}{}
+
+\PersonalEntry{Birth}{December 9, 1993}
+\PersonalEntry{Address}{North Mugda, Dhaka}
+\PersonalEntry{Phone}{(+88) 01779788023}
+\PersonalEntry{Mail}{\url{billalmasum93@gmail.com}}
+
+%%% Education
+%%% ------------------------------------------------------------
+\NewPart{Education}{}
+
+
+\EducationEntry{BSc. Engineering}{$2010$-Present}{Final Year Student,\\Department of Computer Science and Engineering,\\University of Dhaka}{}
+
+%%% Work experience
+\NewPart{Work Experience}
+\WorkEntry{Threat Equation PTE LTD.\\Singapore}{April $2016$ - September $2016$}{Data Analyst}{}
+
+%%% ------------------------------------------------------------
+\NewPart{Publication, Achievements}{}
+
+\EducationEntry{AIST Conference}{2015}{An author of the paper `Similarity Aggregation for Collaborative Filtering' on recommender systems - \texttt{http://link.springer.com/chapter/10.1007/978-3-319-26123-2\_23}}
+
+\EducationEntry{Eureka}{$2014$} {Author of the article `A Nice Theorem in Multiplicative Functions', published on the Journal of Cambridge University, \textit{Eureka}(2014).}
+
+\EducationEntry{Mathematical Reflections}{2012} {Author of the article `Exponent GCD Lemma', published on Mathematical Reflection, issue $6$ ($2012$).}
+
+\EducationEntry{Bangladesh Mathematical Olympiad}{$2010$}{Medal in National and Regional Olympiads}
+
+\EducationEntry{Bangladesh Mathematical Olympiad}{$2009$}{Medal at Regional Olympiad}
+
+\EducationEntry{College Olympiads}{2009-2010}{Several Medals and crests in some olympiads arranged by some local colleges}
+
+\NewPart{Volunteer Experience}
+\WorkEntry{Bangladesh Mathematical Olympiad}{$2011$ - $2015$}{Trainer and mentor at Bangladesh National Math Camp and IMO-camp}
+
+\sepspace
+
+
+%%% Skills
+%%% ------------------------------------------------------------
+\NewPart{Skills}{}
+
+\SkillsEntry{Languages}{Bengali (mother tongue)}
+\SkillsEntry{}{English}
+
+\SkillsEntry{Knows}{\textsc{C, C++, HTML, CSS, Bootstrap}}
+\SkillsEntry{}{\textsc{Python, PHP, Java, Django, CodeIgniter, \LaTeX}}
+
+\SkillsEntry{Programming Contest}{Participated in three ICPC regional contests }
+\SkillsEntry{}{and several national programming contests.}
+
+\SkillsEntry{}{\textbf{Online Anime Store - \texttt{https://github.com/fifaboy/otaku-store}}}
+\SkillsEntry{Projects}{\textbf{Github User Public Information System Using Python -}}
+\SkillsEntry{}{\texttt{https://github.com/fifaboy/git-public-info}}
+\SkillsEntry{}{ \textbf{Text Editor},\textbf{Online judge}, \textbf{Online Library}, \textbf{File Tracker}}
+
+
+%%% References
+%%% ------------------------------------------------------------
+
+
+\end{document}
