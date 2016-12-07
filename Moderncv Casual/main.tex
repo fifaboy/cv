@@ -1,0 +1,144 @@
+\documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+%\usepackage{hyperref}
+%\hypersetup{pdfstartview=,}
+
+% moderncv themes
+\moderncvstyle{casual}                             % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue}                               % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+% adjust the page margins
+\usepackage[scale=0.75]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+% personal data
+\name{Masum}{Billal}
+%\address{street and number}{postcode city}{country}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
+\phone[mobile]{+8801779788023}                   % optional, remove / comment the line if not wanted
+%\phone[fixed]{+2~(345)~678~901}                    % optional, remove / comment the line if not wanted
+%\phone[fax]{+3~(456)~789~012}                      % optional, remove / comment the line if not wanted
+\email{billalmasum93@gmail.com}                               % optional, remove / comment the line if not wanted
+%\homepage{www.johndoe.com}                         % optional, remove / comment the line if not wanted
+%\extrainfo{additional information}                 % optional, remove / comment the line if not wanted
+\photo[64pt][0.4pt]{pp}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+%\quote{Some quote}                                 % optional, remove / comment the line if not wanted
+
+% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
+%\makeatletter
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%\makeatother
+%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+\begin{document}
+%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
+%-----       resume       ---------------------------------------------------------
+\makecvtitle
+
+\section{Education}
+\cventry{Final year student}{BSc.}{University of Dhaka}{Dhaka}{\textit{2.7 (expected)}}{}  % arguments 3 to 6 can be left empty
+%\cventry{year--year}{Degree}{Institution}{City}{\textit{Grade}}{Description}
+
+%\section{Master thesis}
+%\cvitem{title}{\emph{Title}}
+%\cvitem{supervisors}{Supervisors}
+%\cvitem{description}{Short thesis abstract}
+
+\section{Achievements}
+%\subsection{Vocational}
+\cventry{Programming contest}{Participated in three ICPC Dhaka regional programming contests}{Also participated in some inter-university programming contests.}{}{}{}
+\cventry{$2010$}{Medal in math olympiad}{Bangladesh Mathematical Olympiad}{National, Regional}{}{}
+\cventry{$2009$}{Medal in math olympiad}{Bangladesh Mathematical Olympiad}{Regional}{}{}
+\cventry{$2011-2015$}{Trainer at math camps}{Bangladesh Mathematical Olympiad}{}{}{}
+
+
+\section{Projects}
+\cventry{$2016$}{Data Analysis and Web Application}{Web server log analysis and prediction of vulnerability}{}{}{I did this project under \textit{Threat Equation PTE Ltd, Singapore}. Analyzed web server logs to predict attacks on a particular site, worked on building a web application for the company. For the internal logs, accuracy was $100\%$ with mean absolute error $0\%$. Though accuracy would be reduced for external logs.}
+\cventry{$2016$}{Machine Learning}{A movie recommender system}{Platform: Python, tools used: \textit{pandas, scikit-learn, numpy etc}}{}{In this project I have predicted movie ratings based on machine learning algorithms. \texttt{https://github.com/fifaboy/rec-mnb}}
+\cventry{$2016$}{E-commerce web application}{Otaku Store}{Platform: Python, Framework: Django}{}{This was an academic project for building an online anime store. \texttt{https://github.com/fifaboy/otaku-store}}
+\cventry{$2016$}{Git Info Retrieval}{Platform: Python}{Framework: Django, Rest API}{I used this project primarily for learning django and rest.}{\texttt{https://github.com/fifaboy/git-public-info}}
+\cventry{$2015$}{Java}{Online Library}{Platform: Java, Framework: JSP}{}{An academic project for building an online library with software design patterns}{}
+\cventry{$2014$}{PHP}{Online File Tracker}{Platform: PHP, Framework: Codeigniter}{a software solution for tracking files in a company.}{}{}
+
+\section{Publications}
+\cventry{$2016$}{Topics in Number Theory: An Olympiad Oriented Approach}{Masum Billal, Amir Hossein}{Currently under review by Springer}{}{}
+\cventry{$2015$}{Similarity Aggregation for Collaborative Filtering}{AIST Conference}{Sheikh Muhammad Sarwar, Masum Billal, Mahmudul Hasan, Dimitry I. Ignatov}{}{\texttt{http://link.springer.com/chapter/10.1007/978-3-319-26123-2\_23}}
+\cventry{$2015$}{General LTE Sequence}{Arxiv E-print}{Masum Billal}{My paper on a generalization of Lifting the Exponent property in sequence.}{\texttt{https://arxiv.org/abs/1509.03288}}
+\cventry{$2015$}{Remarks On General Fibonacci Numbers}{Arxiv E-print}{Masum Billal}{My results on Fibonacci number}{\texttt{https://arxiv.org/abs/1502.06869}}
+\cventry{$2015$}{Combinatorial Geometry In Olympiad}{Accepted for Mathematical Reflections in $2015$}{Masum Billal, Nur Muhammad Shafiullah}{}{}
+\cventry{$2014$}{A Nice Theorem in Multiplicative Functions}{Eureka, The Cambridge University Mathematical Society}{Issue $63$}{Masum Billal}{}
+\cventry{$2012$}{Exponent GCD Lemma}{Mathematical Reflections}{Issue $6$}{Masum Billal}{}
+\cventry{$2016$}{A Nice Lemma In Congruence: Thue’s Lemma}{Under review by Crux Mathematicorum, Canadian Mathematical Society}{Masum Billal}{}{}
+\cventry{$2016$}{$10$th Bangladesh Mathematical Olympiad: Selected Problems and Solutions}{Bangladesh Math Booklet, $2015$}{}{Problems and solutions I and some other trainers discussed in math camp, IMO camp.}{\texttt{https://karushib.wordpress.com/2016/05/29/bangladesh-booklet-of-math-problems-2015/}}
+\cventry{$2015$}{Number Theory Problems From IMO}{Art of Problem Solving}{}{A collection of International Mathematical Olympiad problems.}{\texttt{http://www.artofproblemsolving.com/community/c6h1161504p5531708}}
+\cventry{$2015$}{Collection of Number Theory Problems: APMO}{Art of Problem Solving}{Masum Billal}{A collection of Asian Pacific Mathematical Olympiad Number Theory problems}{\texttt{http://www.artofproblemsolving.com/community/q3h1160887p5526295}}
+\cventry{$2015$}{A Sledgehammer in Olympiad Number Theory: Zsigmondy’s Theorem}{}{}{Masum Billal}{}
+\cventry{$2015$}{Combinatory Problems}{}{}{Masum Billal}{A combinatorics tutorial in Bangla.}
+
+\section{Skills}
+\cvdoubleitem{Programming}{C, C++}{Level:}{Programming contests}
+\cvdoubleitem{languages}{Python, Java, PHP}{Level:}{Academic project.}
+%\cvdoubleitem{}{PHP}{Expertise: }{Academic project}
+\cvdoubleitem{Tools}{HTML, Javascript, MySQL, Jinja2, \LaTeX, Git, Bootstrap etc}{}{}
+
+\section{Interests and Hobbies}
+\cvitem{Research}{Optimizing algorithms or finding new ones. Studying on topics I am interested in for interesting results. Mathematics, Algorithms, Cryptography, Machine Learning etc.}
+\cvitem{Programming}{Setting problems. Problemsetter at Hackerrank.}
+\cvitem{Mathematics}{Finding new results and creating new problems.}
+\cvitem{Publication}{Publishing articles or papers on journals.}
+\cvitem{Gaming}{Playing Dota $2$, Fifa etc.}
+
+\section{Others}
+\cvlistitem{Phone: $+8801779788023$}
+\cvlistitem{Email: \texttt{billalmasum93@gmail.com}}
+\cvlistitem{LinkedIn: \texttt{https://www.linkedin.com/in/billalmasum93}}
+\cvlistitem{Git: \texttt{https://github.com/fifaboy}}
+\cvlistitem{Blog: \texttt{https://karushib.wordpress.com/}}
+%\cvlistitem{Item 2}
+%\cvlistitem{Item 3. This item is particularly long and therefore normally spans over several lines. Did you notice the indentation when the line wraps?}
+
+%\section{Extra 2}
+%\cvlistdoubleitem{Item 1}{Item 4}
+%\cvlistdoubleitem{Item 2}{Item 5\cite{book1}}
+%\cvlistdoubleitem{Item 3}{Item 6. Like item 3 in the single column list before, this item is particularly long to wrap over several lines.}
+
+\section{References}
+\begin{cvcolumns}
+  \cvcolumn{}{
+	  \begin{itemize}
+	  	\item \textit{Mahbub Majumdar}, Professor, Computer Science \& Engineering Department, BRAC University, Buidling-5, Floor-4th, Room: UB50402\\
+	  	45 Mohakhali C/A, Dhaka, Bangladesh\\
+	  	%Tel: +8804478444060, Ext: 5065\\
+	  	Email: \texttt{majumdar@bracu.ac.bd}
+	  \end{itemize}}
+  %\cvcolumn{Category 2}{Amongst others:\begin{itemize}\item Person 1, and\item Person 2\end{itemize}(more upon request)}
+  %\cvcolumn[0.5]{All the rest \& some more}{\textit{That} person, and \textbf{those} also (all available upon request).}
+\end{cvcolumns}
+
+% Publications from a BibTeX file without multibib
+%  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
+%  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
+\nocite{*}
+
+% Publications from a BibTeX file using the multibib package
+%\section{Publications}
+%\nocitebook{book1,book2}
+%\bibliographystylebook{plain}
+%\bibliographybook{publications}                   % 'publications' is the name of a BibTeX file
+%\nocitemisc{misc1,misc2,misc3}
+%\bibliographystylemisc{plain}
+%\bibliographymisc{publications}                   % 'publications' is the name of a BibTeX file
+
+%\clearpage\end{CJK*}                              % if you are typesetting your resume in Chinese using CJK; the \clearpage is required for fancyhdr to work correctly with CJK, though it kills the page numbering by making \lastpage undefined
+\end{document}
+
+
+%% end of file `template.tex'.
