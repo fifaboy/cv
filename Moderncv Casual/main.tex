@@ -18,15 +18,16 @@
 %\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
 
 % personal data
-\name{Masum}{Billal}
+\name{Masum}{Billal
+	}
 %\address{street and number}{postcode city}{country}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
-\phone[mobile]{+8801779788023}                   % optional, remove / comment the line if not wanted
+%\phone[mobile]{}                   % optional, remove / comment the line if not wanted
 %\phone[fixed]{+2~(345)~678~901}                    % optional, remove / comment the line if not wanted
 %\phone[fax]{+3~(456)~789~012}                      % optional, remove / comment the line if not wanted
-\email{billalmasum93@gmail.com}                               % optional, remove / comment the line if not wanted
+                            % optional, remove / comment the line if not wanted
 %\homepage{www.johndoe.com}                         % optional, remove / comment the line if not wanted
 %\extrainfo{additional information}                 % optional, remove / comment the line if not wanted
-\photo[64pt][0.4pt]{pp}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+\photo[64pt][0.4pt]{pp1}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
 %\quote{Some quote}                                 % optional, remove / comment the line if not wanted
 
 % to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
@@ -42,9 +43,14 @@
 %\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
 %-----       resume       ---------------------------------------------------------
 \makecvtitle
+\begin{flushright}
+	{\normalfont\normalsize Github: \texttt{https://github.com/fifaboy}}\\
+	{\normalfont \normalsize Mobile: +8801779788023}\\
+	{\normalfont\normalsize	Email: \texttt{billalmasum93@gmail.com}  } 
+\end{flushright}
 
 \section{Education}
-\cventry{Final year student}{BSc.}{University of Dhaka}{Dhaka}{\textit{2.7 (expected)}}{}  % arguments 3 to 6 can be left empty
+\cventry{Fresh Graduate}{BSc}{CSE, University of Dhaka}{Dhaka}{}{}  % arguments 3 to 6 can be left empty
 %\cventry{year--year}{Degree}{Institution}{City}{\textit{Grade}}{Description}
 
 %\section{Master thesis}
@@ -52,22 +58,27 @@
 %\cvitem{supervisors}{Supervisors}
 %\cvitem{description}{Short thesis abstract}
 
-\section{Achievements}
-%\subsection{Vocational}
-\cventry{$2012$}{IUT Inter-University Contest}{}{Rank $13$}{}{}
-\cventry{$2013$}{ICPC}{Team member of DU Mango}{Rank $17$}{}{}
-\cventry{$2012$}{ICPC}{Team member of Assault Everyone}{Rank $18$}{}{}
-\cventry{$2010$}{Medal in math olympiad}{Bangladesh Mathematical Olympiad}{National, Regional}{}{}
-\cventry{$2009$}{Medal in math olympiad}{Bangladesh Mathematical Olympiad}{Regional}{}{}
-\cventry{$2011-2015$}{Trainer at math camps}{Bangladesh Mathematical Olympiad}{National, Extension and IMO math camps}{}{}
 
-\section{Projects}
-\cventry{$2016$}{Data Analysis and Web Application}{Web server log analysis and prediction of vulnerability}{}{}{I did this project under \textit{Threat Equation PTE Ltd, Singapore}. Analyzed web server logs to predict attacks on a particular site, worked on building a web application for the company. For the internal logs, accuracy was $100\%$ with mean absolute error $0\%$. Though accuracy would be reduced for external logs.}
-\cventry{$2016$}{Machine Learning}{A movie recommender system}{Platform: Python, tools used: \textit{pandas, scikit-learn, numpy etc}}{}{In this project I have predicted movie ratings based on machine learning algorithms. \texttt{https://github.com/fifaboy/rec-mnb}}
+\section{Projects and Experience}
+\cventry{$2016$}{Data Analysis}{Web server log analysis and prediction of vulnerability}{}{}{I did this project under \textit{Threat Equation PTE Ltd, Singapore}. Analyzed web server logs to predict attacks on a particular site. For the internal logs, accuracy was $100\%$ with mean absolute error $0\%$. Though accuracy would be reduced for external logs.}
+\cventry{$2016$}{Web Application}{Dashboard}{}{}{This was another project I initially worked on under Threat Equation PTE LTD. as well. The objective was to build a dashboard using \textbf{Django} that would collect data from a plugin and show using javascript and some other tools.}
+\cventry{$2016$}{Machine Learning}{A movie recommender system}{Platform: Python, tools used: \textit{pandas, scikit-learn, numpy etc}}{}{In this project I have predicted movie ratings using \textbf{Naive Bayes}. \texttt{https://github.com/fifaboy/rec-mnb}}
+\cventry{$2016$}{Machine Learning}{A machine learning library for C++}{Platform: C++}{In this project (incomplete), I am writing a machine learning library containing some popular algorithms in machine learning and data mining.}{\texttt{https://github.com/fifaboy/cppmllib}}
 \cventry{$2016$}{E-commerce web application}{Otaku Store}{Platform: Python, Framework: Django}{}{This was an academic project for building an online anime store. \texttt{https://github.com/fifaboy/otaku-store}}
 \cventry{$2016$}{Git Info Retrieval}{Platform: Python}{Framework: Django, Rest API}{I used this project primarily for learning django and rest}{\texttt{https://github.com/fifaboy/git-public-info}}
 \cventry{$2015$}{Java}{Online Library}{Platform: Java, Framework: JSP}{}{An academic project for building an online library with software design patterns}{}
 \cventry{$2014$}{PHP}{Online File Tracker}{Platform: PHP, Framework: Codeigniter}{a software solution for tracking files in a company}{}{}
+
+
+\section{Achievements}
+%\subsection{Vocational}
+\cventry{$2013$}{Inter-University Programming Contest}{North South University, Bangladesh}{}{Rank $9$}{}
+\cventry{$2012$}{Inter-University Programming Contest}{IUT, Bangladesh}{Rank $13$}{}{}
+\cventry{$2013$}{ICPC}{Dhaka Regional, Bangladesh}{}{Rank $17$}{}{}
+\cventry{$2012$}{ICPC}{Dhaka Regional, Bangladesh}{}{Rank $18$}{}{}
+\cventry{$2010$}{Medal in math olympiad}{Bangladesh Mathematical Olympiad}{National, Regional}{}{}
+\cventry{$2009$}{Medal in math olympiad}{Bangladesh Mathematical Olympiad}{Regional}{}{}
+\cventry{$2011-2015$}{Trainer at math camps}{Bangladesh Mathematical Olympiad}{National, Extension and IMO math camps}{}{}
 
 \section{Publications}
 \cventry{$2016$}{Topics in Number Theory: An Olympiad Oriented Approach}{Masum Billal, Amir Hossein}{Currently under review by Springer}{}{}
@@ -78,11 +89,11 @@
 \cventry{$2014$}{A Nice Theorem in Multiplicative Functions}{Eureka, The Cambridge University Mathematical Society}{Issue $63$}{Masum Billal}{}
 \cventry{$2012$}{Exponent GCD Lemma}{Mathematical Reflections}{Issue $6$}{Masum Billal}{}
 \cventry{$2016$}{A Nice Lemma In Congruence: Thue’s Lemma}{Under review by Crux Mathematicorum, Canadian Mathematical Society}{Masum Billal}{}{}
-\cventry{$2016$}{$10$th Bangladesh Mathematical Olympiad: Selected Problems and Solutions}{Bangladesh Math Booklet, $2015$}{}{Problems and solutions I and some other trainers discussed in math camp, IMO camp}{\texttt{https://karushib.wordpress.com/2016/05/29/bangladesh-booklet-of-math-problems-2015/}}
-\cventry{$2015$}{Number Theory Problems From IMO}{Art of Problem Solving}{}{A collection of International Mathematical Olympiad problems}{\texttt{http://www.artofproblemsolving.com/community/c6h1161504p5531708}}
-\cventry{$2015$}{Collection of Number Theory Problems: APMO}{Art of Problem Solving}{Masum Billal}{A collection of Asian Pacific Mathematical Olympiad Number Theory problems}{\texttt{http://www.artofproblemsolving.com/community/q3h1160887p5526295}}
+\cventry{$2016$}{$10$th Bangladesh Mathematical Olympiad: Selected Problems and Solutions}{Bangladesh Math Booklet, $2015$}{}{}{\texttt{https://karushib.wordpress.com/2016/05/29/bangladesh-booklet-of-math-problems-2015/}}
+%\cventry{$2015$}{Number Theory Problems From IMO}{Art of Problem Solving}{}{A collection of International Mathematical Olympiad problems}{\texttt{http://www.artofproblemsolving.com/community/c6h1161504p5531708}}
+%\cventry{$2015$}{Collection of Number Theory Problems: APMO}{Art of Problem Solving}{Masum Billal}{A collection of Asian Pacific Mathematical Olympiad Number Theory problems}{\texttt{http://www.artofproblemsolving.com/community/q3h1160887p5526295}}
 \cventry{$2015$}{A Sledgehammer in Olympiad Number Theory: Zsigmondy’s Theorem}{}{}{Masum Billal}{}
-\cventry{$2015$}{Combinatory Problems}{}{}{Masum Billal}{A combinatorics tutorial in Bangla.}
+%\cventry{$2015$}{Combinatory Problems}{}{}{Masum Billal}{A combinatorics tutorial in Bangla.}
 
 \section{Skills}
 \cvdoubleitem{Programming}{C, C++}{Level:}{Programming contests}
@@ -95,13 +106,10 @@
 \cvitem{Programming}{Setting problems. Problemsetter at Hackerrank.}
 \cvitem{Mathematics}{Finding new results and creating new problems.}
 \cvitem{Publication}{Publishing articles or papers on journals.}
-\cvitem{Gaming}{Playing Dota $2$, Fifa etc.}
+%\cvitem{Gaming}{Playing Dota $2$, Fifa etc.}
 
 \section{Others}
-\cvlistitem{Phone: $+8801779788023$}
-\cvlistitem{Email: \texttt{billalmasum93@gmail.com}}
 \cvlistitem{LinkedIn: \texttt{https://www.linkedin.com/in/billalmasum93}}
-\cvlistitem{Git: \texttt{https://github.com/fifaboy}}
 \cvlistitem{Blog: \texttt{https://karushib.wordpress.com/}}
 %\cvlistitem{Item 2}
 %\cvlistitem{Item 3. This item is particularly long and therefore normally spans over several lines. Did you notice the indentation when the line wraps?}
