@@ -1,44 +1,20 @@
-\documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
-%\usepackage{hyperref}
-%\hypersetup{pdfstartview=,}
+\documentclass[11pt,a4paper]{moderncv}       
 
-% moderncv themes
 \moderncvstyle{casual}                             % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
-\moderncvcolor{blue}                               % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
-%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
-%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+\moderncvcolor{blue}     
+\usepackage[utf8]{inputenc}
+\usepackage{fontawesome}
+\usepackage{fontspec}
+\usepackage{tabularx}
+\usepackage{ragged2e}
 
-% character encoding
-\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
-%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+\usepackage[scale=0.8]{geometry}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{import}
 
-% adjust the page margins
-\usepackage[scale=0.75]{geometry}
-%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
-%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
-
-% personal data
-\name{Masum}{Billal
-	}
-%\address{street and number}{postcode city}{country}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
-%\phone[mobile]{}                   % optional, remove / comment the line if not wanted
-%\phone[fixed]{+2~(345)~678~901}                    % optional, remove / comment the line if not wanted
-%\phone[fax]{+3~(456)~789~012}                      % optional, remove / comment the line if not wanted
-                            % optional, remove / comment the line if not wanted
-%\homepage{www.johndoe.com}                         % optional, remove / comment the line if not wanted
-%\extrainfo{additional information}                 % optional, remove / comment the line if not wanted
-\photo[64pt][0.4pt]{pp1}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
-%\quote{Some quote}                                 % optional, remove / comment the line if not wanted
-
-% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
-%\makeatletter
-%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
-%\makeatother
-%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
-
-% bibliography with mutiple entries
-%\usepackage{multibib}
-%\newcites{book,misc}{{Books},{Others}}
+\name{Masum}{Billal}
+\photo[64pt][0.4pt]{pp1}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized 
 \begin{document}
 
 \makecvtitle
@@ -52,15 +28,17 @@
 \cventry{}{BSc}{CSE,Department of Computer Science and Engineering,University of Dhaka}{Bangladesh}{}{}  
 
 \section{Work Experience}
-\cventry{$2018$--present}{Machine learning engineer and senior programmer}{Auleek}{Dhaka}{}{}
+\cventry{$2019$}{Senior Data Scientist, August $4$ to present}{Shohoz}{Dhaka}{}{}
+\cventry{$2019$}{Machine learning engineer and senior programmer, October $2018$ to May $2019$}{Auleek}{Dhaka}{}{}
 \cventry{$2017$}{Software engineer, R\&D}{March, $2017$ to September, $2018$}{Reve systems}{Dhaka}{}{}
 \cventry{$2016$}{Data analyst and software developer}{Remote Job}{}{Threat Equation PTE Ltd.,Singapore}{}
 
 \section{Projects}
+\cventry{$2019$}{Machine learning, data engineering, data analysis}{Shohoz}{Python}{At Shohoz, I have been working on a data pipeline in Azure, user profiling and clustering, fraud analysis and exploratory data analysis. I have also worked on AWS based data pipeline using Kafka as message queue service.}{}
 \cventry{$2019$}{Deep learning, computer vision, feature extraction, object detection}{Auleek}{Python, C++, C\#}{I used deep learning in tensorflow to extract features from floorplan images. The challenge was to find a viable solution that can detect elements such as doors, walls, windows etc and I was able to do it using object detection. There was also esh generation for different kind of object shapes, mesh combining such as union or intersection, checking if an object can be placed in an arrangement (for example with rotation) etc}{}
 \cventry{$2018$}{E-veterinary, web development}{Reve systems}{Java, Spring Boot, JPA}{I worked on both backend and frontend for this government project. We used Spring boot for faster development, thymeleaf and javascript for front-end communication and JPA for hibernate-like ORM manipulation. Agile development process helped us complete the project within the tight deadline.}{Here is the live server \texttt{http://evet.gov.bd/login}}
 \cventry{$2017$}{IP log, Networking, Multithreading}{Reve systems}{C++}{My job in this project was to receive and process all incoming and outgoing packets from a network interface. Multithreading was necessary to prevent packet loss.}{}
-\cventry{$2016$}{Machine learning, recommender Systems, improving collaborative filtering}{Bsc Thesis}{C++, Python}{In my thesis, I developed a recommender systems with F-1 score of almost 75\%. I intend to improve it even further. I also presented some ideas which are similar to ensemble learning}{}
+\cventry{$2016$}{Machine learning, recommender Systems, improving collaborative filtering}{Bsc Thesis}{C++, Python}{In my thesis, I developed a recommender systems with F-1 score of almost 75\%. }{}
 \cventry{$2016$}{Machine learning, web development, data analysis}{Threat Equation PTE Ltd}{Python, Django}{My role in this project was to predict vulnerability from server logs after training them on previously fed data. Then I had to present the predictions and related information in the dashboard for visualization}{}
 
 \section{Achievements and voluntary experience}
@@ -72,9 +50,10 @@
 \cventry{$2010$}{Medal in math olympiad}{Bangladesh Mathematical Olympiad}{National, Regional}{}{}
 \cventry{$2009$}{Medal in math olympiad}{Bangladesh Mathematical Olympiad}{Regional}{}{}
 \cventry{$2011-2015$}{Trainer at math camps}{Bangladesh Mathematical Olympiad}{National, Extension and IMO math camps}{}{}
+\cventry{$2019$}{Mathematical programming}{Global Rank $132$ on Hackerrank mathematics section}{}{}{}
 
 \section{Publications}
-\cventry{$2019$}{Topics in Number Theory: An Olympiad Oriented Approach}{Masum Billal, Amir Hossein}{Amazon}{}{}
+\cventry{$2019$}{Topics in Number Theory: An Olympiad Oriented Approach}{Masum Billal, Amir Hossein}{Amazon}{ISBN-10: 1719920311}{}
 \cventry{$2015$}{Similarity Aggregation for Collaborative Filtering}{AIST Conference}{Sheikh Muhammad Sarwar, Masum Billal, Mahmudul Hasan, Dimitry I. Ignatov}{}{\texttt{http://link.springer.com/chapter/10.1007/978-3-319-26123-2\_23}}
 \cventry{$2014$}{A Nice Theorem in Multiplicative Functions}{Eureka, The Cambridge University Mathematical Society}{Issue $63$}{Masum Billal}{}
 \cventry{$2012$}{Exponent GCD Lemma}{Mathematical Reflections}{Issue $6$}{Masum Billal}{}
@@ -93,43 +72,18 @@
 \cvitem{Research}{Optimizing algorithms or finding new ones. Studying on topics I am interested in for interesting results. Mathematics, Algorithms, Cryptography, Machine Learning etc.}
 \cvitem{Programming}{Creating and solving problems. Proposed some problems for Hackerrank and some inter university contests.}
 \cvitem{Mathematics}{Finding new results and creating or solving new problems.}
-\cvitem{Gaming}{Playing Dota $2$, Assassin Creed Origins, Sekiro etc.}
+\cvitem{Gaming}{Playing Dota $2$, Assassin Creed Origins etc.}
 
 \section{Others}
 \cvlistitem{LinkedIn: \texttt{https://www.linkedin.com/in/billalmasum93}}
 \cvlistitem{Blog: \texttt{https://karushib.wordpress.com/}}
 
-\section{References}
-\begin{cvcolumns}
-  \cvcolumn{}{
-	  \begin{itemize}
-	  	\item \textit{Mahbub Majumdar}, Professor, Computer Science \& Engineering Department, BRAC University, Buidling-5, Floor-4th, Room: UB50402\\
-	  	45 Mohakhali C/A, Dhaka, Bangladesh\\
-	  	%Tel: +8804478444060, Ext: 5065\\
-	  	Email: \texttt{majumdar@bracu.ac.bd}
-	  	\item \textit{Farhad Alam Bhuiyan}, Software Engineer\\
-	  	Dohatec New Media\\
-	  	Email: \texttt{farhad@dohatec.com.bd}
-	  \end{itemize}}
-  %\cvcolumn{Category 2}{Amongst others:\begin{itemize}\item Person 1, and\item Person 2\end{itemize}(more upon request)}
-  %\cvcolumn[0.5]{All the rest \& some more}{\textit{That} person, and \textbf{those} also (all available upon request).}
-\end{cvcolumns}
 
-% Publications from a BibTeX file without multibib
-%  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
-%  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
+\begin{thebibliography}{99}
+	\bibitem{farhad} Farhad Alam Bhuiyan, Data Science Lead, Shohoz, Bangladesh. Email: \texttt{farhad.alam@shohoz.com}
+	\bibitem{majumdar} \textit{Mahbub Majumdar}, Professor and Chairperson, Department of Computer Science and Engineering, BRAC University. Email: \texttt{majumdar@bracu.ac.bd}
+\end{thebibliography}
 \nocite{*}
-
-% Publications from a BibTeX file using the multibib package
-%\section{Publications}
-%\nocitebook{book1,book2}
-%\bibliographystylebook{plain}
-%\bibliographybook{publications}                   % 'publications' is the name of a BibTeX file
-%\nocitemisc{misc1,misc2,misc3}
-%\bibliographystylemisc{plain}
-%\bibliographymisc{publications}                   % 'publications' is the name of a BibTeX file
-
-%\clearpage\end{CJK*}                              % if you are typesetting your resume in Chinese using CJK; the \clearpage is required for fancyhdr to work correctly with CJK, though it kills the page numbering by making \lastpage undefined
 \end{document}
 
 

@@ -1,200 +1,239 @@
-\documentclass[11pt,a4paper,roman]{moderncv}        
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Twenty Seconds Resume/CV
+% LaTeX Template
+% Version 1.0 (14/7/16)
+%
+% Original author:
+% Carmine Spagnuolo (cspagnuolo@unisa.it) with major modifications by 
+% Vel (vel@LaTeXTemplates.com), Harsh (harsh.gadgil@gmail.com) and johayon
+%
+% License:
+% The MIT License (see included LICENSE file)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\moderncvstyle{banking}                            % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
-\moderncvcolor{blue}                                % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
-%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
-\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
 
-% character encoding
-\usepackage[utf8]{inputenc}
-\usepackage{fontawesome}
-\usepackage{fontspec}
-\usepackage{tabularx}
-\usepackage{ragged2e}
-% if you are not using xelatex ou lualatex, replace by the encoding you are using
-%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+\documentclass[letterpaper]{twentysecondcv} % a4paper for A4
 
-% adjust the page margins
-\usepackage[scale=0.8]{geometry}
-\usepackage{graphicx}
-\usepackage{multicol}
-%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
-%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
-
-\usepackage{import}
-
-% personal data
-\name{Masum}{Billal}
-%\address{500 College Ave, Swarthmore, PA 19081 }{}{}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
-\phone[mobile]{+880-1779788023}                   % optional, remove / comment the line if not wanted
-% \phone[fixed]{01234 123456}                    % optional, remove / comment the line if not wanted
-%\phone[fax]{+3~(456)~789~012}                      % optional, remove / comment the line if not wanted
-% \email{xpan1@swarthmore.edu}                               % optional, remove / comment the line if not wanted
-% \homepage{shawnpan.me}                         % optional, remove / comment the line if not wanted
-% \extrainfo{}                 % optional, remove / comment the line if not wanted
-\photo[64pt][0.4pt]{pp1}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
-%\quote{Some quote}                                 % optional, remove / comment the line if not wanted
-
-% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
-%\makeatletter
-%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
-%\makeatother
-%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
-
-% bibliography with mutiple entries
-%\usepackage{multibib}
-%\newcites{book,misc}{{Books},{Others}}
-  
-\newcommand*{\customcventry}[7][.25em]{
-  \begin{tabular}{@{}l} 
-    {\bfseries #4}
-  \end{tabular}
-  \hfill% move it to the right
-  \begin{tabular}{l@{}}
-     {\bfseries #5}
-  \end{tabular} \\
-  \begin{tabular}{@{}l} 
-    {\itshape #3}
-  \end{tabular}
-  \hfill% move it to the right
-  \begin{tabular}{l@{}}
-     {\itshape #2}
-  \end{tabular}
-  \ifx&#7&%
-  \else{\\%
-    \begin{minipage}{\maincolumnwidth}%
-      \small#7%
-    \end{minipage}}\fi%
-  \par\addvspace{#1}}
-
-\newcommand{\SubItem}[1]{
-	{\setlength\itemindent{15pt} \item[-] #1}
+% Command for printing skill overview bubbles
+\newcommand\skills{ 
+~ 
+	\smartdiagram[bubble diagram]{
+        \textbf{Machine}\\\textbf{Learning},
+        \textbf{Visualization},
+				\textbf{~~~Deep~~~}\\\textbf{Learning},
+        \textbf{~~~~~~~~Big~~~~~~~~}\\\textbf{Data},
+        \textbf{Statistical}\\\textbf{Analysis},
+				\textbf{Data}\\\textbf{Wrangling}
+    }
 }
 
+% Programming skill bars
+%\programming{ { Java $\textbullet$ MatLab $\textbullet$ Maple/ 3}, {Scala $\textbullet$ R %$\textbullet$ Spark $\textbullet$ \LaTeX/ 4}, {Python $\textbullet$ SQL/ 5}}
 
-\newcommand*{\customcvproject}[4][.25em]{
-%   \vfill\noindent
-  \begin{tabular}{@{}l} 
-    {\bfseries #2}
-  \end{tabular}
-  \hfill% move it to the right
-  \begin{tabular}{l@{}}
-     {\itshape #3}
-  \end{tabular}
-  \ifx&#4&%
-  \else{\\%
-    \begin{minipage}{\maincolumnwidth}%
-      \small#4%
-    \end{minipage}}\fi%
-  \par\addvspace{#1}}
+\tools{
+\tikzset{
+  every shadow/.style={
+    fill=none,
+    shadow xshift=0pt,
+    shadow yshift=0pt}
+}
+\hspace{-1.0cm}
+\definecolor{pblue}{HTML}{0395DE}
+\smartdiagramset{set color list = {pblue,pblue,pblue,pblue,pblue,pblue,pblue}}
+\smartdiagram[descriptive diagram]{
+{\large \faFlask,{Sklearn Xgboost Caret RandomForest TensorFlow Keras NLTK Gensim Forecast Pandas Numpy}},
+{\large \mfHadoop, {Spark Mllib GraphX Sparksql Zeppelin Livy}}, 
+{\large \faDatabase,{MySql Elastic-Search Hbase Cassandra}}, {\large \faAreaChart,{Matplotlib Seaborn ggplot Plotly D3js Tableau \LaTeX}},
+{\large \faCogs,{git Travis AWS Unittest Flask Airflow Vertx}}}
 
-\setlength{\tabcolsep}{12pt}
+}
 
-%----------------------------------------------------------------------------------
-%            content
-%----------------------------------------------------------------------------------
+\programmings{25/materialteal/\textbf{\textsf{R}},  25/materialcyan/\mfScala \textbf{ Scala}, 40/orange/ \ \mfPython \textbf{ Python}, 10/green/ \ \mfJavaBold \textbf{Java}}{2.25}{0.75}
+
+% Interest icons text
+\interests{ \textcolor{pblue}{\large \faBook \ \ \faMusic \ \ \faTv \ \ \faBicycle  \ \ \faGamepad \ \ \faAndroid \ \ \faLinux
+}}
+
+%----------------------------------------------------------------------------------------
+%	 PERSONAL INFORMATION
+%----------------------------------------------------------------------------------------
+% If you don't need one or more of the below, just remove the content leaving the command, e.g. \cvnumberphone{}
+
+\cvname{Jonathan Ohayon, Ph.D} % Your name
+\cvjobtitle{ Data Scientist \\ Machine Learning } % Job
+% title/career
+
+\cvbirthday{12/04/1986} \cvnatio{French-Canadian} % Personal website
+\cvhome{Paris, Fr}  \cvnumberphone{+33 640958173} % Phone number
+\cvmail{johayon.math@gmail.com} % Email address
+\cvlinkedin{/in/johayonmath}
+\cvgithub{johayon}
+
+%----------------------------------------------------------------------------------------
+
 \begin{document}
-%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
-%-----       resume       ---------------------------------------------------------
 
-\makecvtitle
-\vspace{-.2in}
-\begin{center}
-	\includegraphics[scale=.2]{pp1}
-\end{center}
-\vspace*{-.2in}
-
-\section{EDUCATION}
-{\customcventry{BSC}{CSE}{University of Dhaka}{Dhaka, Bangladesh}{}{}}
+\makeprofile % Print the sidebar
 
 
-\section{EXPERIENCE}
-{\customcventry{October 2018 - May 2019}{Machine learning engineer}{Auleek}{Dhaka, Bangladesh}{}
-{\begin{itemize}
-  \item \textbf{Hestia}
-  \SubItem{Used deep learning in tensorflow to extract features (door, wall, window etc) from floorplan images.}
-  \SubItem{RnD on interior design automation, such as structural groups of furnitures and finding the most optimal configuration.}
-  \SubItem{Implemented mesh generation for different kind of object shapes, mesh combining such as union or intersection, checking if an object can be placed in an arrangement.}
-\end{itemize}
-}
+%----------------------------------------------------------------------------------------
+%	 EXPERIENCE
+%----------------------------------------------------------------------------------------
 
-{\customcventry{March 2017 - September 2018}{Software Engineer}{Reve Systems}{Dhaka, Bangladesh}{}
-{\begin{itemize}
-  \item \textbf{e-Veterinary Services}
-  \SubItem{Worked full-stack from Spring Boot framework to thymeleaf frontend templating, bootstrap and javascript.}
-  \SubItem{Used JPA for hibernate-like ORM manipulation.}
-  \SubItem{Followed agile development process for meeting tight deadline.}
-  \SubItem{Live server of project: \texttt{http://evet.gov.bd/login}}
-  \item \textbf{IP Log}
-  \SubItem{Worked on networking and socket protocols for receiving and processing all incoming and outgoing packets in a network.}
-  \SubItem{Used multi threading for avoiding packet loss and prevented buffer overflow during packet receiving.}
-  \item \textbf{Surveillance}
-  \SubItem{Worked on backend of this Struts based project.}
-  \SubItem{Implemented features such as duplicate number detection, home or office detection etc based on geolocation.}
-  \SubItem{Did RnD on geolocation, 2G/3G/GSM protocols and distance estimation models from signal strength and related parameters.}
-  \SubItem{Implemented trilateration as part of this project.}
-\end{itemize}
-}
+\section{Experience}{\faAlignJustify}
 
-{\customcventry{April 2016-September 2016}{Software developer and data analyst}{Threat Equation PTE LTD.}{Dhaka, Bangladesh}{Remote job}
-{\begin{itemize}
-  \item \textbf{Threat Equation}
-  \SubItem{Worked on backend of a Django dashboard.}
-  \SubItem{Pared server logs for feeding data into the learning model for predicting vulnerability in the application.}
-  \SubItem{Used libraries such as Chart.js to show visualization of predicted results and related data in dashboard.}
-\end{itemize}
-}
+\begin{twenty} % Environment for a list with descriptions
+\twentyitem
+    	{2018 - ...}
+	{Pr\'esent}
+         {Data Scientist R\&D}
+         {Air Liquide}
+        {}
+        {
+				\begin{itemize}
+				\item Predictive algorithm in HealthCare, importance of interpretability.
+				\item Exploratory subject on IOT potential with marketing database.
+				\item \textbf{outils}: Python, R,  git
+				\end{itemize} }\\
 
-\section{Achievements and voluntary experience}
-{
-	\cvitem{2009}{Medal in regional mathematical olympiad, Dhaka, Bangladesh.}
-	\cvitem{2010}{Medal in regional and national mathematical olympiad, Bangladesh.}
-	\cvitem{2011-2015}{Trainer (specially for number theory) in national and IMO math camps.}
-	\cvitem{2012}{Participated in Dhaka regional ICPC, rank 18.}
-	\cvitem{2012}{Participated in Inter-University Programming Contest, Islamic University of Technology, Bangladesh, rank 13.}
-	\cvitem{2013}{Participated in Dhaka regional ICPC, rank 17.}
-	\cvitem{2013}{Participated in Inter-University Programming Contest, North South University, Bangladesh, rank 9.}
-}
+\twentyitem
+    	{2016 - 2018}
+		{}
+        {Data Scientist}
+        {\href{http://www.holimetrix.ccom/}{Holimetrix}}
+        {}
+        {\vspace{-2mm}\begin{itemize}[topsep=0pt,partopsep=0pt]
+				\item  Website traffic and KPI attributions on TV/Radio ads.
+				\item Cross-Device Pairing across multiple websites.
+				\item Google like sessionization from terabytes of websites event logs.
+				\item Developed internal tools for routine tasks.
+				\item \textbf{tools}: Python, Scala, Spark, GraphX, AWS, Travis, git
+				\end{itemize}} \\
+				
+	\twentyitem
+    	{2016 - ...}
+		{}
+        {Data Scientist/Machine Learning Engineer}
+        {FreeLance}
+        {}
+        {\vspace{-2mm}\begin{itemize}[topsep=0pt,partopsep=0pt]
+        \item Scoring algorithm development for a machine learning saas solution.
+        \item Scoring models for targeted e-mail marketing campaigns. 
+        \item Statistical Analysis and predictive models for HealthCare client. 
+				\item \textbf{tools}: Python, R, jupyter, git, Unittest, Plotly
+    \end{itemize}} \\
+		
+    \twentyitem
+   		{2015 - 2016}
+		{}
+        {Data Scientist/Machine Learning Engineer}
+        {\href{http://www.cetadata.com/}{CetaData}}
+        {}
+        {\vspace{-2mm}\begin{itemize}[topsep=0pt,partopsep=0pt]
+				\item Development of a scoring algorithm on a saas solution.
+        \item Predictive model of speed limitation on road chunks.
+				\item \textbf{tools}: C++, Python, Sklearn, StatsModels, Seaborn
+    \end{itemize}} \\
+		
+     \twentyitem
+   		{2015 - 2015}
+		{}
+        {Data Scientist}
+        {\href{http://www.keyrus.com/}{Keyrus}}
+        {}
+        {
+        \vspace{-2mm}\begin{itemize}[topsep=0pt,partopsep=0pt]
+        \item Development of a machine-learning platform as a service on AWS. 
+				\item Recommendation system on spark with MLlib.
+				\item \textbf{tools}: Spark, MLlib, Hbase, Cassandra
+    \end{itemize} } \\
+		
+	\twentyitem
+   		{2011 - 2013}
+		{}
+        {Research and Teaching Assistant}
+        {\href{http://www.univ-lyon1.fr/}{University Lyon I/ Montpellier II}}
+        {}
+        {} 
+        
+	%\twentyitem{<dates>}{<title>}{<location>}{<description>}
+\end{twenty}
 
-\section{Publications}
-\cvitemwithcomment{2019}{Topics in Number Theory: An Olympiad Oriented Approach}{Masum Billal, Amir Hossein}
-\cvitemwithcomment{2015}{Similarity Aggregation for Collaborative Filtering, AIST Conference}{Sheikh Muhammad Sarwar, Masum Billal, Mahmudul Hasan, Dimitry I. Ignatov}
-\cvitemwithcomment{2014}{A Nice Theorem in Multiplicative Functions, Issue 63, Eureka, Cambridge Mathematical Society}{Masum Billal}
-\cvitemwithcomment{2012}{Exponent GCD Lemma, Issue 6, Mathematical Reflections}{Masum Billal}
+%----------------------------------------------------------------------------------------
+%	 EDUCATION
+%----------------------------------------------------------------------------------------
+\vspace{-0.25cm}
+\section{Education}{\faGraduationCap}
 
-\section{PROJECTS}
-{\customcvproject{Localizer}{2019}
-{\begin{itemize}
-  \item A self-contained tool for localizing objects in images.
-  \item Used darkflow to implement state-of-the-art YOLO algorithm for object detection in tensorflow.
-\end{itemize}
-}
+\begin{twenty} % Environment for a list with descriptions
+	\twentyitemshorttest
+    	{2014 - 2015}
+        {}
+        {Adv. MSc., Big data/Machine Learning}
+        {Telecom ParisTech}
+        {with Honor}
+				
+	\twentyitemshorttest
+    	{2008 - 2012}
+		{}
+        {Ph.D in Mathematics}
+        {\href{http://www.umontpellier.fr/}{University of Montpellier II}}
+        {}
+				
+	\twentyitemshorttest
+    	{2006 - 2008}
+		{}
+        {MSc. in Mathematics and Statistics}
+        {\href{http://www.umontpellier.fr/}{University of Montpellier II}}
+        {Major in Mathematics, with Honor}
+	%\twentyitem{<dates>}{<title>}{<organization>}{<location>}{<description>}
+\end{twenty}
 
-{\customcvproject{Improving Collaborative Filtering Based Recommender Systems}{BSc Thesis, 2016}
-{\begin{itemize}
-  \item Developed a new recommender system.
-  \item Achieved F-1 score of almost 75\% on movielens dataset.
-  \item Introduced, implemented ideas of aggregating multiple metrics and tested the hypothesis.
-  \item Currently work on progress to improve it even further.
-\end{itemize}
-}
-}
-
-{
-	\customcvproject{Otaku Store}{2016}
-	{\begin{itemize}
-			\item Worked full stack for building a Django framework based e-commerce site.
-	\end{itemize}}
-}
-
-{\customcvproject{A Recommender System}{2016}
-	{\begin{itemize}
-			\item Developed a recommender system based on Multinomial Naive Bayes for learning purpose.
-		\end{itemize}
-	}
-}
-\section{Others}
-\cvitem{Github}{\texttt{https://github.com/fifaboy}}
-\cvitem{LinkedIn}{\texttt{https://www.linkedin.com/in/billalmasum93/}}
-\cvitem{Blog}{\texttt{https://karushib.wordpress.com/}}
-\end{document}
+\section{Projects - Research}{\faClipboard}
+\begin{twenty}
+	\twentyitem
+			{2018 - ...}
+			{Pr\'esent}
+			{Contribution Open source Scikit-Learn}
+			{Github - sklearn}
+			{}
+			{}
+	\twentyitem
+			{2015 - ...}
+			{Present}
+			{Data Science, Machine Learning Challenge}
+			{Kaggle - DataScience}
+			{}
+			{\vspace{-2mm}\begin{itemize}[topsep=0pt,partopsep=0pt]
+			 \item Quora - Cdiscount - Avito - Human or Robot - SpringLeaf
+			 \item \textbf{tools}: Python, Xgboost, TensorFlow, Keras, NLTK, gensim
+			\end{itemize}} \\
+			
+	\twentyitem
+    	{2014 - 2015}
+		{}
+        {Adv. MSc. Project: Scalable recommender system}
+        {Yuzu}
+        {}
+        {\vspace{-2mm}\begin{itemize}[topsep=0pt,partopsep=0pt]
+        \item Development of a recommender system for coupons on websites.
+				\item Cross-validation of the system using the temporal structure of the data.
+        \item \textbf{tools}: Spark, MLlib, Zeppelin, Elastic-Search
+		\end{itemize}} \\
+		
+	\twentyitem
+			{2008 - 2012}
+			{}
+			{Ph.D thesis}
+			{\href{http://www.umontpellier.fr/}{University of Montpellier II}}
+			{}
+			{\vspace{-2mm}\begin{itemize}[topsep=0pt,partopsep=0pt]
+			\item \textbf{thesis}: Quantization/Deformation of co-isotropic Lie Sub-algebra
+			\item \textbf{keywords}: Quantum Groups, Quantization, Properads, Lie Bialgebra
+			\end{itemize}}
+\end{twenty}
+\end{document} 
