@@ -122,6 +122,7 @@
     baseurl       = http://,
     pdfborder     = 0 0 0,
     pdfpagemode   = \pdfpagemode,
+    pdfstartview=,
     pdfstartpage  = 1,
     pdfcreator    = {\LaTeX{} with 'moderncv' package},
 %    pdfproducer   = {\LaTeX{}},% will/should be set automatically to the correct TeX engine used
