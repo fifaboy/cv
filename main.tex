@@ -1,7 +1,7 @@
-\documentclass[11pt,a4paper]{moderncv}       
+\documentclass[11pt,a4paper]{moderncv}
 
 \moderncvstyle{casual}                             % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
-\moderncvcolor{blue}     
+\moderncvcolor{blue}
 \usepackage[utf8]{inputenc}
 \usepackage{fontawesome}
 \usepackage{tabularx}
@@ -14,60 +14,44 @@
 \usepackage{import}
 
 \name{Masum}{Billal}
-\photo[64pt][0.4pt]{pp1}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized 
+\photo[64pt][0.4pt]{pp1}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized
 \begin{document}
 
 \makecvtitle
 \begin{flushright}
 	{\normalfont\normalsize Github: \texttt{https://github.com/proafxin}}\\
 	{\normalfont \normalsize Mobile: +8801779788023}\\
-	{\normalfont\normalsize	Email: \texttt{billalmasum93@gmail.com}  } 
+	{\normalfont\normalsize	Email: \texttt{billalmasum93@gmail.com}  }
 \end{flushright}
 
 \section{Education}
-\cventry{}{BSc}{CSE,Department of Computer Science and Engineering,University of Dhaka}{Bangladesh}{}{}  
+\cventry{}{CSE}{Department of Computer Science and Engineering,University of Dhaka}{Bangladesh}{}{}
 
-\section{Work Experience}
-\cventry{$2019$}{Senior Data Scientist, August $2019$ to present}{Shohoz}{Dhaka}{}{
-	My work at Shohoz.
+\section{Recent Work Experience}
+\cventry{$2020$ November--currently working here}{Senior Data Scientist}{Ixora Solution}{Dhaka}{}{}
+\cventry{August $2019$--November, $2020$}{Senior Data Scientist}{Shohoz}{Dhaka}{}{
 	\begin{itemize}
-		\item Successfully completed data pipelines, analytics and visualization and scalable data storage solution for Corona Tracer Bangladesh, a joint venture by Bangladesh government and Shohoz. Tech stacks: \texttt{PySpark, Cassandra, Bokeh, Pandas, Holoviews}, etc. This project is live at \texttt{http://tracer-admin.ctbd.corona-dghs.xyz/}
+		\item Successfully built data pipelines, analytics and visualization and scalable data storage solution for Corona Tracer Bangladesh, a joint venture by Bangladesh government and Shohoz. Tech stacks: \texttt{PySpark, Cassandra, Bokeh, Pandas, Holoviews}, etc. This project is live at \texttt{http://tracer-admin.ctbd.corona-dghs.xyz/}
 		\item Built data pipelines in AWS, Azure (\texttt{python}) using message queue services such as Service bus/Event Hub/Kafka or machine learning pipeline services.
+		\item Created automated fraud detection pipelines.
 		\item Hands on exploratory data analysis of real user data using tools such as \texttt{pandas, PySpark, Scikit-learn, Tensorflow, PyTorch}, etc.
-		\item Developed some fraud detection services e.g. automated syndicate detection in ride sharing.
 		\item Developed an automated user profiling system for quest planning.
 		\item Developed automated priority dispatching services.
 		\item Used data mining techniques for provider distribution/trend analysis/recommendation.
 	\end{itemize}
-	}
-\cventry{$2019$}{Machine learning engineer and senior programmer, October $2018$ to May $2019$}{Auleek}{Dhaka}{}{
-	My work at Auleek.
-	\begin{itemize}
-		\item Developed an application in \texttt{python} that uses deep learning to identify different components of a floor-plan image.
-		\item Worked on mesh generation/union and object placement in a floor-plan in Unity3d/C\#.
-	\end{itemize}
 }
-\cventry{$2017$}{RnD Software engineer, March $2017$ to September $2018$}{Reve systems}{Dhaka}{}{
-	My work at Reve.
-	\begin{itemize}
-		\item Developed a web application as part of a govt. project using \texttt{Java SpringBoot, Thymeleaf, JPA} along with vanilla JS (full stack). Project site: \texttt{http://evet.gov.bd/login}
-		\item Built a multi-threaded \texttt{C++} application that captures all packets that are received in a network.
-	\end{itemize}
-}
-\cventry{$2016$}{Software developer}{Remote Job}{Threat Equation PTE Ltd.}{Singapore}{
-	My work at Threat PTE.
-	\begin{itemize}
-		\item Used \texttt{django} framework to build a web dashboard (full stack).
-		\item Used machine learning algorithms on server logs to predict whether it indicates an attack (if so, what type).
-	\end{itemize}
-}
+\subsection{Previous Experience}
+\cventry{October $2018$--May $2019$}{Machine learning engineer and senior programmer}{Auleek}{Dhaka}{}{}
+\cventry{March $2017$--September $2018$}{RnD Software engineer}{Reve systems}{Dhaka}{}{}
+\cventry{$2016$}{Software developer}{Remote Job}{Threat Equation PTE Ltd.}{Singapore}{}
 
 \section{Pet Projects}
+\cventry{NoSQL to SQL}{Data engineering}{Open source library}{Python}{\url{https://pypi.org/project/flatten-nosql/}}{}
 \cventry{Seeding in \texttt{k-means} clustering}{Unsupervised learning}{Research}{Python}{I tried to improve the \texttt{k-means} clustering algorithm in this project}{\url{https://github.com/proafxin/clustering}}
-\cventry{Localizer}{Object detection}{Personal project}{Python}{This project is a deep learning based localization application. It can be trained using given images and detect the objects in test images}{\url{https://github.com/proafxin/Localizer}}
+\cventry{Localizer}{Object detection}{Personal project}{Python}{A YOLO based localization application}{\url{https://github.com/proafxin/Localizer}}
 \cventry{Improving collaborative filtering}{Machine learning}{Research on recommender Systems}{C++, Python}{In this project, I developed a recommender systems with F-1 score of almost 75\%. This was part of my BSc. thesis}{}
-\cventry{Media recommender}{Machine learning based web application}{Personal project}{Django}{This is a web application that provides personalized feed based on user preferences and past history}{\url{https://github.com/proafxin/media-recommendation}}
-\cventry{Online library}{Web application}{Personal project}{Dotnet core}{This is a dotnet core MVC based web application for online library.}{\url{https://github.com/proafxin/library}}
+%\cventry{Media recommender}{Machine learning based web application}{Personal project}{Django}{This is a web application that provides %personalized feed based on user preferences and past history}{\url{https://github.com/proafxin/media-recommendation}}
+\cventry{Online library}{Web application}{Personal project}{Dotnet core}{A dotnet core based web application for online library}{\url{https://github.com/proafxin/library}}
 
 \section{Achievements and voluntary experience}
 %\subsection{Vocational}
@@ -96,12 +80,11 @@
 %\cventry{$2015$}{A Sledgehammer in Olympiad Number Theory: Zsigmondy’s Theorem}{}{}{Masum Billal}{}
 %\cventry{$2015$}{Combinatory Problems}{}{}{Masum Billal}{A combinatorics tutorial in Bangla.}
 
-
 \section{Interests and Hobbies}
 \cvitem{Research}{Optimizing algorithms or finding new ones. Studying on topics I am interested in for interesting results. Mathematics, Algorithms, Cryptography, Machine Learning etc.}
 \cvitem{Programming}{Creating and solving problems. Proposed some problems for Hackerrank and some inter university contests.}
 \cvitem{Mathematics}{Finding new results and creating or solving new problems.}
-\cvitem{Gaming}{Playing Dota $2$, Assassin Creed games, etc.}
+\cvitem{Gaming}{Playing Dota $2$, Valorant, Assassin Creed games, etc.}
 
 \section{Others}
 \cvlistitem{LinkedIn: \texttt{https://www.linkedin.com/in/billalmasum93}}
@@ -111,6 +94,7 @@
 \begin{thebibliography}{99}
 	\bibitem{farhad} Farhad Alam Bhuiyan, Data Science Lead, Shohoz, Bangladesh. Email: \texttt{farhad.alam@shohoz.com}
 	\bibitem{majumdar} \textit{Mahbub Majumdar}, Professor and Chairperson, Department of Computer Science and Engineering, BRAC University. Email: \texttt{majumdar@bracu.ac.bd}
+	\bibitem{nobel} Khandaker Amitabh Nobel, Senior Vice President, Technology, Shohoz, Bangladesh.
 \end{thebibliography}
 \nocite{*}
 \end{document}
